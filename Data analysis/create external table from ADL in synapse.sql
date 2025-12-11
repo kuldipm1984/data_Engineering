@@ -1,11 +1,11 @@
 USE mydbsql;
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '1984@bhel';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'XXXX';
 CREATE DATABASE SCOPED CREDENTIAL cred_sales
 WITH IDENTITY = 'Managed Identity';
 -- Create external data source
 CREATE EXTERNAL DATA SOURCE my_sales_data
 WITH (
-    LOCATION = 'https://mystore1984.dfs.core.windows.net/document',
+    LOCATION = 'https://storage.dfs.core.windows.net/document',
     CREDENTIAL = cred_sales
 );
 -- Create external file format for Parquet
